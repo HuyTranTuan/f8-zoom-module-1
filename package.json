@@ -1,0 +1,21 @@
+{
+    "scripts": {
+        "index": "sass ./assets/scss/index.scss ./assets/css/pages/index.css -w",
+        "account": "sass ./assets/scss/account.scss ./assets/css/pages/account.css -w",
+        "sign-in": "sass ./assets/scss/sign-in.scss ./assets/css/pages/sign-in.css -w",
+        "sign-up": "sass ./assets/scss/sign-up.scss ./assets/css/pages/sign-up.css -w",
+        "payment": "sass ./assets/scss/payment.scss ./assets/css/pages/payment.css -w",
+        "collection": "sass ./assets/scss/collection.scss ./assets/css/pages/collection.css -w",
+        "dev": "vite",
+        "build": "vite build",
+        "deploy": "vite build && gh-pages -d dist"
+    },
+    "dependencies": {
+        "gh-pages": "^6.3.0",
+        "vite": "^6.3.5",
+        "vite-plugin-ejs": "^1.7.0"
+    },
+    "devDependencies": {
+        "sass-embedded": "^1.88.0"
+    }
+}

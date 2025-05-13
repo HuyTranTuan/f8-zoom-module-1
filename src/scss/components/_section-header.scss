@@ -50,3 +50,40 @@ $secondary-color: #FFF4F1;
         }
     }
 }
+
+.bg__orange{
+    background-color: $primary-light-color;
+    border-radius: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    h2{
+        color: $light-black;
+        font-family: $font-quicksand;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 2.8rem;
+    }
+    .remote-btn{
+        gap: 1rem;
+        span{
+            display: none;
+        }
+
+        svg{
+            background-color: $white;
+            path{
+                fill: $primary-color;
+            }
+
+            &:hover{
+                background-color: $primary-color;
+                path{
+                    fill: $white;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+<!-- img: "./img/index/topsell-1.png",
+title: "Target Gift Card 50$ (US)",
+price: "120.000 ~ 134.000",
+rating: "4.8",
+count: "120k",
+rateIcon: "./img/ic_round-star.svg" -->
+
+<div class="grouplist__wrapper">
+    <% listProduct.forEach(element => { %>
+        <article class="grouplist__item">
+            <a href="" class="grouplist__item--img">
+                <img src=<%= element.img %> alt="">
+            </a>
+            <div class="grouplist__item--content">
+                <h3 class="grouplist__item--title"><a href=""><%= element.title %></a></h3>
+                <p><%= element.price %></p>
+                <div class="grouplist__item--rating">
+                    <img src=<%= element.rateIcon %> alt="">
+                    <div class="grouplist__item--count">
+                        <span class="rating__number"><%= element.rating %></span>
+                        <span class="count__number">(<%= element.count %>)</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+    <% }) %>
+</div>

@@ -250,6 +250,21 @@ $secondary-color: #FFF4F1;
     }
 }
 
+.grouplist__products{
+    margin-top: 4rem;
+}
+
+.grouplist__products--content{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    border-radius: 2rem;
+    border: 0.1rem solid $gray;
+}
+
+
+
 .topsell__banner--2{
     margin-top: 4rem;
     background: radial-gradient(50% 50% at 50% 50%, rgba(215, 66, 12, 0.75) 0%, #6f2307f2 100%);

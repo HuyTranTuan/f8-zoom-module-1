@@ -6,10 +6,13 @@ $font-poppins: "Poppins", sans-serif;
 $font-manrorpe: "Manrope", sans-serif;
 
 $white: #FFFFFF;
-$black: #5C5C5C;
+$black: #000;
+$light-black: #323232;
+$dark-gray: #5C5C5C;
 $gray: #AEAEAE;
 $grey: #F2F2F2;
 $primary-color: #ED5A25;
+$primary-light-color: #FFDBCE;
 $secondary-color: #FFF4F1;
 
 .header__top {
@@ -79,7 +82,7 @@ $secondary-color: #FFF4F1;
         transition-timing-function: ease-in;
 
         a {
-            color: $black;
+            color: $dark-gray;
             padding: 1rem 2rem;
 
             &:hover {
@@ -190,43 +193,44 @@ nav.header__nav {
     display: flex;
     align-items: center;
     gap: 2rem;
+    position: relative;
 
-    &>a {
+    .header__nav--item > a {
         text-decoration: none;
-        color: $black;
+        color: $dark-gray;
         font-family: $font-quicksand;
         font-weight: 500;
         font-size: 1.5rem;
-        line-height: 5.4rem;
+        line-height: 4.4rem;
         letter-spacing: 0;
         display: inline-block;
         height: 5.4rem;
+        padding: 0.5rem 1rem;
 
-        :hover {
+        &:hover {
             color: $primary-color;
 
             path {
                 stroke: $primary-color;
             }
 
-            &~.header__megamenu {
-                opacity: 1;
-                visibility: visible;
-                scale: 1;
-
-            }
         }
-    }
 
-    .header__nav--item {
-        position: relative;
+        &:hover~.header__megamenu {
+            opacity: 1;
+            visibility: visible;
+            scale: 1;
+
+        }
     }
 
     .header__megamenu {
         position: absolute;
+        width: 120rem;
+        height: 40rem;
         top: 100%;
         left: 0;
-        transform-origin: 0% 0%;
+        transform-origin: 10% 0%;
         opacity: 0;
         visibility: hidden;
         scale: 0;
@@ -234,5 +238,118 @@ nav.header__nav {
         transition: opacity, visibility, scale;
         transition-duration: 0.3s;
         transition-timing-function: ease-in;
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+        padding-left: 4.8rem;
+        padding-right: 4.8rem;
+
+        &:hover {
+            opacity: 1;
+            visibility: visible;
+            scale: 1;
+        }
+
+        &--list {
+            display: flex;
+            flex-direction: column;
+            gap: 2.3rem;
+            max-width: 22.25%;
+
+            a {
+                color: $black;
+                font-family: $font-manrorpe;
+                font-size: 1.8rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 2.8rem;
+                text-decoration: none;
+                display: flex;
+                padding: 0.8rem 1.2rem;
+                justify-content: space-between;
+            }
+            & > a:hover{
+                background-color: $gray;
+                span {
+                    color: $primary-color;
+                }
+            }
+        }
+
+        &--submenu {
+            display: flex;
+            position: absolute;
+            right: 10%;
+            top: 4rem;
+            gap: 2rem;
+
+            a {
+                color: $black;
+                font-family: $font-manrorpe;
+                font-size: 1.4rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
+    }
+    .header__nav--item:last-child{
+        position: relative;
+        .header__submenu{
+            width: max-content;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            transform-origin: 0% 0%;
+            opacity: 0;
+            visibility: hidden;
+            scale: 0;
+            background-color: $white;
+            transition: opacity, visibility, scale;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in;
+            border-radius: 1rem;
+            box-shadow: 0.3rem 0.8rem 1.5rem 0rem rgba(215, 215, 215, 0.50);
+            padding: 1.8rem 1.6rem;
+            a{
+                color: $black;
+                font-family: $font-quicksand;
+                font-size: 1.4rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 2rem;
+                text-decoration: none;
+                display: block;
+                padding: 0.5rem 1rem;
+                border-radius: 0.5rem;
+            }
+            a:hover {
+                background-color: $primary-light-color;
+            }
+        }
+
+        & > a:hover ~ .header__submenu, .header__submenu:hover{
+            scale: 1;
+            opacity: 1;
+            visibility: visible;
+        }
+        
+    }
+
+}
+
+.header__hotline{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 1rem;
+    color: $black;
+    font-family: $font-quicksand;
+    font-size: 1.472rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    a{
+        text-decoration: none;
+
     }
 }

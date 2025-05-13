@@ -17,10 +17,12 @@
 // Components
 @use "./components/button";
 @use "./components/form";
+@use "./components/split-banner";
+@use "./components/section-header";
 
 
 // Common
-*{
+* {
     box-sizing: border-box;
 }
 

@@ -1,0 +1,48 @@
+$font-inter: "Inter", sans-serif;
+$font-quicksand: "Quicksand", sans-serif;
+$font-poppins: "Poppins", sans-serif;
+$font-manrorpe: "Manrope", sans-serif;
+
+$white: #FFFFFF;
+$black: #000;
+$light-black: #323232;
+$dark-gray: #5C5C5C;
+$gray: #AEAEAE;
+$grey: #F2F2F2;
+$primary-color: #ED5A25;
+$primary-light-color: #FFDBCE;
+$secondary-color: #FFF4F1;
+
+.split__banner {
+    margin-top: 4rem;
+}
+
+.split__banner--item {
+    text-align: right;
+    background-color: $primary-light-color;
+    height: 25rem;
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+
+    .banner__item,
+    .banner__background {
+        height: 100%;
+        object-fit: contain;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+    }
+
+    .banner__background {
+        position: absolute;
+        right: 0;
+        z-index: 0;
+    }
+}
+
+.item--flip {
+    .banner__item {
+        transform: scaleX(-1);
+    }
+}

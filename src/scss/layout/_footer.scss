@@ -1,1 +1,115 @@
 @use "./variables";
+
+$font-inter: "Inter", sans-serif;
+$font-quicksand: "Quicksand", sans-serif;
+$font-poppins: "Poppins", sans-serif;
+$font-manrorpe: "Manrope", sans-serif;
+
+$white: #FFFFFF;
+$black: #000;
+$light-black: #323232;
+$dark-gray: #5C5C5C;
+$gray: #AEAEAE;
+$grey: #F2F2F2;
+$primary-color: #ED5A25;
+$primary-light-color: #FFDBCE;
+$secondary-color: #FFF4F1;
+
+
+.footer{
+    border-top: 0.1rem solid $grey;
+}
+
+.footer__content{
+    margin-top: 6rem;
+    h3{
+        color: $black;
+        font-family: Manrope;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    .footer__nav{
+        margin-top: 2.5rem;
+    }
+
+    .footer__nav--item{
+        color: $black;
+        font-family: Inter;
+        font-size: 1.6rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: none;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        margin-top: 1rem;
+        &:hover{
+            color: $primary-color;
+        }
+    }
+}
+
+.footer__certification{
+    display: flex;
+    height: 7.4rem;
+    gap: 3.5rem;
+    img{
+        &:nth-child(2), &:nth-child(3){
+            width: 6.2rem;
+            height: 6.2rem;
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+    }
+}
+
+.footer__company{
+    margin-top: 1.4rem;
+    p, a{
+        color: $black;
+        font-family: $font-inter;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: none;
+    }
+    a{
+        display: block;
+        margin-top: 1rem;
+        &:hover{
+            color: $primary-color;
+        }
+    }
+}
+
+.footer__copyright{
+    background-color: $secondary-color;
+    color: $gray;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+@media (max-width: 575.98px){
+    .footer__certification {
+        height: 6rem;
+        gap: 1.7rem;
+        img {
+            &:nth-child(2),
+            &:nth-child(3) {
+                width: 5.4rem;
+                height: 5.4rem;
+            }
+        }
+    }
+}

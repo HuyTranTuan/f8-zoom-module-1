@@ -1,0 +1,52 @@
+$font-inter: "Inter", sans-serif;
+$font-quicksand: "Quicksand", sans-serif;
+$font-poppins: "Poppins", sans-serif;
+$font-manrorpe: "Manrope", sans-serif;
+
+$white: #FFFFFF;
+$black: #000;
+$light-black: #323232;
+$dark-gray: #5C5C5C;
+$gray: #AEAEAE;
+$grey: #F2F2F2;
+$primary-color: #ED5A25;
+$primary-light-color: #FFDBCE;
+$secondary-color: #FFF4F1;
+
+.section__header{
+    display: flex;
+    justify-content: space-between;
+    h2{
+        color: $light-black;
+        font-family: $font-quicksand;
+        font-size: 3.2rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+}
+.remote-btn{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    span{
+        display: block;
+        width: fit-content;
+        color: $light-black;
+        font-family: $font-quicksand;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 2.4rem;
+    }
+    svg{
+        width: 2.4rem;
+        height: 2.4rem;
+        background-color: $primary-light-color;
+        border-radius: 50%;
+        fill: $white;
+        &:hover path{
+            fill: $primary-color;
+        }
+    }
+}

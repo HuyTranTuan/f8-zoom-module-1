@@ -1,0 +1,101 @@
+@use "../layout/variables";
+
+$font-inter: "Inter", sans-serif;
+$font-quicksand: "Quicksand", sans-serif;
+$font-poppins: "Poppins", sans-serif;
+$font-manrorpe: "Manrope", sans-serif;
+
+$white: #FFFFFF;
+$black: #000;
+$light-black: #323232;
+$dark-gray: #5C5C5C;
+$gray: #AEAEAE;
+$grey: #F2F2F2;
+$primary-color: #ED5A25;
+$primary-light-color: #FFDBCE;
+$secondary-color: #FFF4F1;
+
+.formgroup{
+    position: relative;
+    & > svg{
+        position: absolute;
+        top: 50%;
+        left: 2rem;
+        transform: translate(0%, -50%);
+    }
+
+    input{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 5rem;
+        padding-right: 2rem;
+        width: 100%;
+        background-color: $grey;
+        border-radius: 2rem;
+        &::placeholder{
+            color: $gray;
+        }
+    }
+    button{
+        position: absolute;
+        top: 50%;
+        right: 0.3rem;
+        transform: translate(0%, -50%);
+        width: 3.4rem;
+        height: 3.4rem;
+        background-color: $primary-color;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+.formgroup + .formgroup{
+    margin-top: 1.2rem;
+}
+
+.forgot__password{
+    margin-top: 2.3rem;
+    color: $primary-color;
+    text-decoration: none;
+    font-family: $font-inter;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: block;
+    text-align: center;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.send__verification--mail{
+    margin-top: 0.7rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: $white;
+    background-color: $primary-color;
+    text-decoration: none;
+    border-radius: 2rem;
+    font-family: $font-inter;
+    font-size: 1.6rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: block;
+    width: fit-content;
+
+    &:hover {
+        color: $primary-color;
+        background-color: $white;
+        outline: 0.1rem solid $primary-color;
+    }
+}

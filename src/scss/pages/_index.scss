@@ -181,6 +181,74 @@ $secondary-color: #FFF4F1;
     margin-top: 4rem;
 }
 
+.topsell__products{
+    margin-top: 4rem;
+    &--container{
+        padding-top: 2rem;
+    }
+}
+
+.topsell__products--sider{
+    position: relative;
+    & > img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: bottom;
+        display: block;
+        background-color: $primary-color;
+        border-radius: 2rem;
+    }
+    .topsell__img--btn{
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translate(-50%);
+        width: 80%;
+        text-align: center;
+        h3{
+            color: $secondary-color;
+            font-family: $font-quicksand;
+            font-size: 3.2rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        button {
+            margin-top: 1.6rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            background-color: $white;
+            color: $primary-color;
+            font-family: $font-quicksand;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 2rem;
+            margin-right: auto;
+            margin-left: auto;
+            border-radius: 2rem;
+
+            &:hover{
+                color: $white;
+                background-color: $primary-color;
+                border: 0.1rem solid $white;
+            }
+        }
+    }
+}
+
+.newest__products{
+    margin-top: 4rem;
+    &--container{
+        padding-top: 2rem;
+    }
+}
 
 .topsell__banner--2{
     margin-top: 4rem;

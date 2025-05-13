@@ -35,9 +35,9 @@ $secondary-color: #FFF4F1;
 }
 
 .index__functional--list{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
 }
 
 .index__functional--item{
@@ -64,6 +64,32 @@ $secondary-color: #FFF4F1;
 
 .index__sugestion{
     margin-top: 4rem;
+    &--filter{
+
+        .filter__item{
+            color: $primary-color;
+            border: 0.1rem solid $primary-color;
+            background-color: $white;
+            border-radius: 2rem;
+            padding: 0.5rem 1.5rem;
+            font-family: $font-quicksand;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 2rem;
+            transition: color, background-color;
+            transition-timing-function: ease-in;
+            transition-duration: 0.3s;
+
+            &:hover{
+                background-color: $primary-color;
+                color: $white;
+            }
+        }
+    }
+    &--products{
+        margin-top: 1.5rem;
+    }
 }
 
 .topsell__banner{

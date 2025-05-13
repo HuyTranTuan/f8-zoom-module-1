@@ -8,7 +8,7 @@ html {
 
 /* XXL and up */
 .container {
-    --gutter: 26px;
+    --gutter: 24px;
     --columns: 12;
 
     max-width: 1200px;
@@ -50,7 +50,7 @@ html {
 }
 
 .row[class*="row-cols-"]>* {
-    width: calc(100% / var(--row-cols-number));
+    width: calc(100% / var(--row-cols-number))!important;
 }
 
 .row>[class*="col-"] {

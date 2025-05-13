@@ -226,8 +226,8 @@ nav.header__nav {
 
     .header__megamenu {
         position: absolute;
-        width: 120rem;
-        height: 40rem;
+        // width: 120rem;
+        overflow: scroll;
         top: 100%;
         left: 0;
         transform-origin: 10% 0%;
@@ -238,10 +238,10 @@ nav.header__nav {
         transition: opacity, visibility, scale;
         transition-duration: 0.3s;
         transition-timing-function: ease-in;
-        padding-top: 4rem;
-        padding-bottom: 5rem;
-        padding-left: 4.8rem;
-        padding-right: 4.8rem;
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
 
         &:hover {
             opacity: 1;
@@ -250,10 +250,9 @@ nav.header__nav {
         }
 
         &--list {
-            display: flex;
-            flex-direction: column;
-            gap: 2.3rem;
-            max-width: 22.25%;
+            display: inline-block;
+            // flex-direction: column;
+            // gap: 2.3rem;
 
             a {
                 color: $black;
@@ -277,7 +276,7 @@ nav.header__nav {
 
         &--submenu {
             display: flex;
-            position: absolute;
+            // position: absolute;
             right: 10%;
             top: 4rem;
             gap: 2rem;

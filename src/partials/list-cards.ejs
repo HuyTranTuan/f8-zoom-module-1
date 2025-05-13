@@ -1,7 +1,7 @@
 <div class="<%= colWithImg %>">
     <% recommendProduct.forEach(function(item,index){ %>
         <div class="<%= itemClass %>" >
-            <div class="product__card">
+            <article class="product__card">
                 <a href="" class="product__card--img">
                     <img src=<%=item.img %> alt="">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -18,7 +18,7 @@
                     <%- item.btnIcon %>
                     <%= item.btnText %>
                 </button>
-            </div>
+            </article>
         </div>
     <% }) %>
 </div>

@@ -48,6 +48,10 @@ $secondary-color: #FFF4F1;
         &:hover path{
             fill: $primary-color;
         }
+
+        &:hover{
+            cursor: pointer;
+        }
     }
 }
 

@@ -1,29 +1,14 @@
-@use "../layout/variables";
-
-$font-inter: "Inter", sans-serif;
-$font-quicksand: "Quicksand", sans-serif;
-$font-poppins: "Poppins", sans-serif;
-$font-manrorpe: "Manrope", sans-serif;
-
-$white: #FFFFFF;
-$black: #000;
-$light-black: #323232;
-$dark-gray: #5C5C5C;
-$gray: #AEAEAE;
-$grey: #F2F2F2;
-$primary-color: #ED5A25;
-$primary-light-color: #FFDBCE;
-$secondary-color: #FFF4F1;
+@use "../variables";
 
 .index__wrapper{
-    background-color: $grey;
+    background-color: variables.$grey;
     padding-top: 2rem;
     padding-bottom: 5.7rem;
 }
 
 .top__banner{
     border-radius: 2rem;
-    background-color: $primary-light-color;
+    background-color: variables.$primary-light-color;
     text-align: right;
     img{
         width: 100%;
@@ -51,7 +36,7 @@ $secondary-color: #FFF4F1;
     div{
         width: 8rem;
         height: 8rem;
-        background-color: $primary-light-color;
+        background-color: variables.$primary-light-color;
         border-radius: 50%;
         display: flex;
         justify-content: center;
@@ -67,12 +52,12 @@ $secondary-color: #FFF4F1;
     &--filter{
 
         .filter__item{
-            color: $primary-color;
-            border: 0.1rem solid $primary-color;
-            background-color: $white;
+            color: variables.$primary-color;
+            border: 0.1rem solid variables.$primary-color;
+            background-color: variables.$white;
             border-radius: 2rem;
             padding: 0.5rem 1.5rem;
-            font-family: $font-quicksand;
+            font-family: variables.$font-quicksand;
             font-size: 1.4rem;
             font-style: normal;
             font-weight: 400;
@@ -82,8 +67,8 @@ $secondary-color: #FFF4F1;
             transition-duration: 0.3s;
 
             &:hover{
-                background-color: $primary-color;
-                color: $white;
+                background-color: variables.$primary-color;
+                color: variables.$white;
             }
         }
     }
@@ -94,7 +79,7 @@ $secondary-color: #FFF4F1;
 
 .topsell__banner{
     margin-top: 4rem;
-    background: linear-gradient(to right, #FF9873, $primary-color);
+    background: linear-gradient(to right, #FF9873, variables.$primary-color);
     border-radius: 2rem;
     overflow: hidden;
     height: 25rem;
@@ -138,17 +123,17 @@ $secondary-color: #FFF4F1;
         width: 90%;
         text-align: center;
         h3 {
-            color: $grey;
-            font-family: $font-quicksand;
+            color: variables.$grey;
+            font-family: variables.$font-quicksand;
             font-size: 3.2rem;
             font-style: normal;
             font-weight: 600;
             line-height: normal;
         }
         p{
-            color: $white;
+            color: variables.$white;
             text-align: center;
-            font-family: $font-quicksand;
+            font-family: variables.$font-quicksand;
             font-size: 1.6rem;
             font-style: normal;
             font-weight: 400;
@@ -165,9 +150,9 @@ $secondary-color: #FFF4F1;
             gap: 1rem;
             flex-shrink: 0;
             border-radius: 10rem;
-            border: 0.1rem solid $primary-color;
-            background: $grey;
-            color: $primary-color;
+            border: 0.1rem solid variables.$primary-color;
+            background: variables.$grey;
+            color: variables.$primary-color;
             text-decoration: none;
             margin-left: auto;
             margin-right: auto;
@@ -195,7 +180,7 @@ $secondary-color: #FFF4F1;
         object-fit: contain;
         object-position: bottom;
         display: block;
-        background-color: $primary-color;
+        background-color: variables.$primary-color;
         border-radius: 2rem;
     }
     .topsell__img--btn{
@@ -206,8 +191,8 @@ $secondary-color: #FFF4F1;
         width: 80%;
         text-align: center;
         h3{
-            color: $secondary-color;
-            font-family: $font-quicksand;
+            color: variables.$secondary-color;
+            font-family: variables.$font-quicksand;
             font-size: 3.2rem;
             font-style: normal;
             font-weight: 600;
@@ -222,9 +207,9 @@ $secondary-color: #FFF4F1;
             padding-bottom: 0.5rem;
             padding-left: 1.5rem;
             padding-right: 1.5rem;
-            background-color: $white;
-            color: $primary-color;
-            font-family: $font-quicksand;
+            background-color: variables.$white;
+            color: variables.$primary-color;
+            font-family: variables.$font-quicksand;
             font-size: 1.4rem;
             font-style: normal;
             font-weight: 500;
@@ -234,9 +219,9 @@ $secondary-color: #FFF4F1;
             border-radius: 2rem;
 
             &:hover{
-                color: $white;
-                background-color: $primary-color;
-                border: 0.1rem solid $white;
+                color: variables.$white;
+                background-color: variables.$primary-color;
+                border: 0.1rem solid variables.$white;
             }
         }
     }
@@ -259,7 +244,7 @@ $secondary-color: #FFF4F1;
     padding-left: 1.6rem;
     padding-right: 1.6rem;
     border-radius: 2rem;
-    border: 0.1rem solid $gray;
+    // border: 0.1rem solid variables.$gray;
 }
 
 .news{
@@ -315,17 +300,17 @@ $secondary-color: #FFF4F1;
         width: 90%;
         text-align: center;
         h3 {
-            color: $grey;
-            font-family: $font-quicksand;
+            color: variables.$grey;
+            font-family: variables.$font-quicksand;
             font-size: 3.2rem;
             font-style: normal;
             font-weight: 600;
             line-height: normal;
         }
         p{
-            color: $white;
+            color: variables.$white;
             text-align: center;
-            font-family: $font-quicksand;
+            font-family: variables.$font-quicksand;
             font-size: 1.6rem;
             font-style: normal;
             font-weight: 400;
@@ -342,9 +327,9 @@ $secondary-color: #FFF4F1;
             gap: 1rem;
             flex-shrink: 0;
             border-radius: 10rem;
-            border: 0.1rem solid $primary-color;
-            background: $grey;
-            color: $primary-color;
+            border: 0.1rem solid variables.$primary-color;
+            background: variables.$grey;
+            color: variables.$primary-color;
             text-decoration: none;
             margin-left: auto;
             margin-right: auto;

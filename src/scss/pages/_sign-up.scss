@@ -1,24 +1,9 @@
-@use "../layout/variables";
-
-$font-inter: "Inter", sans-serif;
-$font-quicksand: "Quicksand", sans-serif;
-$font-poppins: "Poppins", sans-serif;
-$font-manrorpe: "Manrope", sans-serif;
-
-$white: #FFFFFF;
-$black: #000;
-$light-black: #323232;
-$dark-gray: #5C5C5C;
-$gray: #AEAEAE;
-$grey: #F2F2F2;
-$primary-color: #ED5A25;
-$primary-light-color: #FFDBCE;
-$secondary-color: #FFF4F1;
+@use "../variables";
 
 .signup-wrapper {
     min-width: 100vw;
     min-height: 100vh;
-    background: url("../img/sign-up/background.jpg");
+    background: url("./assets/img/sign-up/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -56,8 +41,8 @@ $secondary-color: #FFF4F1;
     max-width: 70%;
 
     h2 {
-        color: $dark-gray;
-        font-family: $font-manrorpe;
+        color: variables.$dark-gray;
+        font-family: variables.$font-manrorpe;
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
@@ -84,8 +69,8 @@ $secondary-color: #FFF4F1;
     background: #F0F0F095;
     background-blend-mode: multiply;
     display: inline-block;
-    color: $black;
-    font-family: $font-quicksand;
+    color: variables.$black;
+    font-family: variables.$font-quicksand;
     font-size: 1.8rem;
     font-style: normal;
     font-weight: 600;
@@ -93,8 +78,8 @@ $secondary-color: #FFF4F1;
     text-align: center;
 }
 .container__left--text{
-    color: $light-black;
-    font-family: $font-quicksand;
+    color: variables.$light-black;
+    font-family: variables.$font-quicksand;
     font-size: 1.6rem;
     font-style: normal;
     font-weight: 600;
@@ -103,7 +88,7 @@ $secondary-color: #FFF4F1;
 
 
 .signup__container--right {
-    background-color: $white;
+    background-color: variables.$white;
     width: 50%;
     padding-top: 8.6rem;
     padding-bottom: 8.6rem;
@@ -119,8 +104,8 @@ $secondary-color: #FFF4F1;
     max-width: 80%;
 
     h1 {
-        color: $light-black;
-        font-family: $font-manrorpe;
+        color: variables.$light-black;
+        font-family: variables.$font-manrorpe;
         font-size: 2.4rem;
         font-style: normal;
         font-weight: 700;
@@ -144,8 +129,8 @@ $secondary-color: #FFF4F1;
     text-align: center;
 
     p {
-        color: $gray;
-        font-family: $font-inter;
+        color: variables.$gray;
+        font-family: variables.$font-inter;
         font-size: 1.4rem;
         font-style: normal;
         font-weight: 400;
@@ -155,8 +140,8 @@ $secondary-color: #FFF4F1;
 
 .btn__create--right {
     display: none;
-    color: $white;
-    font-family: $font-manrorpe;
+    color: variables.$white;
+    font-family: variables.$font-manrorpe;
     font-size: 1.2rem;
     font-style: normal;
     font-weight: 700;
@@ -165,7 +150,7 @@ $secondary-color: #FFF4F1;
     text-decoration: none;
     border-radius: 2rem;
     margin-top: 3.2rem;
-    background-color: $primary-color;
+    background-color: variables.$primary-color;
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-right: 2.3rem;

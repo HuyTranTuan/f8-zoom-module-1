@@ -102,13 +102,13 @@ $secondary-color: #FFF4F1;
 
 @media (max-width: 575.98px){
     .footer__certification {
-        height: 6rem;
+        height: 5rem;
         gap: 1.7rem;
         img {
             &:nth-child(2),
             &:nth-child(3) {
-                width: 5.4rem;
-                height: 5.4rem;
+                width: 5rem;
+                height: 5rem;
             }
         }
     }

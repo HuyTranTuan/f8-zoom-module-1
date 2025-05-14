@@ -10,20 +10,81 @@
     border-radius: 2rem;
     background-color: variables.$primary-light-color;
     text-align: right;
+}
+
+.top__banner--content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 3rem;
+}
+
+.top__banner--title{
+    color: variables.$light-black;
+    font-family: variables.$font-quicksand;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.top__banner--text{
+    color: variables.$light-black;
+    text-align: center;
+    font-family: variables.$font-quicksand;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.4rem;
+    margin-top: 2rem;
+}
+.top__banner--btn{
+    display: flex;
+    width: 14.2118rem;
+    height: 3.6rem;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+    border-radius: 10rem;
+    outline: 0.1rem solid variables.$primary-color;
+    background-color: variables.$white;
+    color: variables.$primary-color;
+    font-family: variables.$font-quicksand;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2rem;
+    margin-top: 2rem;
+
     img{
-        width: 100%;
+        width: 1.8rem;
+        height: 1.8rem;
+        background-color: variables.$white;
+        border-radius: 50%;
+    }
+    &:hover{
+        background-color: variables.$primary-color;
+        color: variables.$white;
     }
 }
 
-.index__functional{
-    margin-top: 4rem;
+.top__banner--img{
+    width: 100%;
 }
 
-.index__functional--list{
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center;
+
+
+
+.index__functional{
+    margin-top: 5rem;
 }
+
+
 
 .index__functional--item{
     text-decoration: none;
@@ -31,7 +92,12 @@
     text-align: center;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 1.2rem;
+    font-family: variables.$font-quicksand;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
 
     div{
         width: 8rem;
@@ -48,7 +114,7 @@
 }
 
 .index__sugestion{
-    margin-top: 4rem;
+    margin-top: 5rem;
     &--filter{
 
         .filter__item{
@@ -73,8 +139,56 @@
         }
     }
     &--products{
-        margin-top: 1.5rem;
+        margin-top: 2rem;
     }
+
+    &--more{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        a{
+            display: inline-block;
+            width: 14.2118rem;
+            height: 3.6rem;
+            padding: 1rem;
+            border-radius: 10rem;
+            outline: 0.1rem solid variables.$gray;
+            color: variables.$primary-color;
+            font-family: variables.$font-quicksand;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.5rem;
+            text-decoration: none;
+            text-align: center;
+        }
+    }
+
+    &--title{
+        display: none;
+        text-align: center;
+
+        h2{
+            color: variables.$light-black;
+            text-align: center;
+            font-family: variables.$font-quicksand;
+            font-size: 2.24rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        p{
+            color: variables.$light-black;
+            text-align: center;
+            font-family: variables.$font-quicksand;
+            font-size: 1.12rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.68rem;
+        }
+    }
+
 }
 
 .topsell__banner{
@@ -87,7 +201,7 @@
         height: 25rem;
         width: 100%;
         object-fit: cover;
-        object-position: top;
+        object-position: center;
     }
 }
 
@@ -162,32 +276,32 @@
 }
 
 .index__categories{
-    margin-top: 4rem;
+    margin-top: 5rem;
 }
 
 .topsell__products{
-    margin-top: 4rem;
+    margin-top: 5rem;
     &--container{
         padding-top: 2rem;
     }
 }
 
 .topsell__products--sider{
-    position: relative;
+    display: flex;
+    height: max-content;
+    flex-direction: column;
+    align-items: center;
+    background-color: variables.$primary-color;
+    padding: 2rem;
+    border-radius: 2rem;
     & > img{
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
+        width: 60%;
+        object-fit: cover;
         object-position: bottom;
         display: block;
         background-color: variables.$primary-color;
-        border-radius: 2rem;
     }
     .topsell__img--btn{
-        position: absolute;
-        bottom: 2rem;
-        left: 50%;
-        transform: translate(-50%);
         width: 80%;
         text-align: center;
         h3{
@@ -263,7 +377,6 @@
 
     border-radius: 2rem;
     overflow: hidden;
-    // height: 25rem;
     .banner__item{
         height: 25rem;
         width: 100%;
@@ -338,3 +451,128 @@
     }
 }
 
+
+@media (max-width: 767.98px) {
+    .top__banner--container{
+        flex-direction: column-reverse;
+        padding: 4rem 1.5rem;
+    }
+    .top__banner--title {
+        font-size: 2.4rem;
+        line-height: 3rem;
+    }
+
+    .top__banner--text {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        margin-top: 1.2rem;
+    }
+
+    .top__banner--btn {
+        gap: 0.8rem;
+        padding: 0.8rem;
+        width: 12.2118rem;
+        height: 3rem;
+        font-size: 1.15rem;
+        line-height: 1.65rem;
+        margin-top: 1.2rem;
+    }
+    
+    .topsell__banner{
+        .banner__item{
+            width: 130%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            transform: translateX(-4rem) scale(1.3);
+        }
+    }
+    .topsell__intro {
+        h3 {
+            font-size: 1.8rem !important;
+        }
+
+        p {
+            font-size: 1.2rem !important;
+            line-height: 1.35rem !important;
+            margin-top: 0.7rem !important;
+        }
+
+        a {
+            width: 8rem !important;
+            height: 2rem !important;
+            padding: 0.5rem !important;
+            gap: 0.5rem !important;
+            margin-top: 0.8rem;
+            font-size: 0.78rem;
+            line-height: 1.1rem;
+            img{
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+        }
+    }
+
+    .topsell__banner--2 {
+        .banner__item {
+            height: 100%;
+            width: 200%;
+            object-fit: contain;
+            object-position: center;
+            transform: translateX(-15rem) scaleX(-1);
+        }
+    }
+
+    .topsell__intro--2 {
+        h3 {
+            font-size: 1.8rem !important;
+        }
+
+        p {
+            font-size: 1.2rem !important;
+            line-height: 1.35rem !important;
+            margin-top: 0.7rem !important;
+        }
+
+        a {
+            width: 8rem !important;
+            height: 2rem !important;
+            padding: 0.5rem !important;
+            gap: 0.5rem !important;
+            margin-top: 0.8rem;
+            font-size: 0.78rem;
+            line-height: 1.1rem;
+
+            img {
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+        }
+    }
+    
+    .index__functional--item {
+        gap: 0.75rem;
+        font-size: 1.2rem;
+        line-height: 1.75rem;
+
+        div {
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+    .index__sugestion--filter {
+        margin-top: 2rem;
+        & > div {
+            text-align: center;
+        }
+        .filter__item {
+            padding: 0.5rem 0.5rem;
+            font-size: 1.2rem;
+            line-height: 1.3rem;
+            min-width: 6rem;
+        }
+    }
+    .index__sugestion--title{
+        display: block;
+    }
+}

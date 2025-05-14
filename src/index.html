@@ -11,23 +11,33 @@
         <%- include("./partials/header.ejs") %>
         
         <!-- Start Index -->
-        <div class="index__wrapper">
+        <main class="index__wrapper">
             <div class="index__content">
                 <div class="container">
 
                     <!-- Top banner -->
-                    <div class="top__banner">
-                        <div class="row">
-                            <div class="col-6 col-xl-6 col-lg-6 col-md-8 col-sm-12 col-xs-12 offset-6 offset-md-4 offset-sm-0">
-                                <img src="./assets/img/index/cover.png" alt="">
+                    <section class="top__banner">
+                        <div class="top__banner--container row">
+                            <div class="col-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="top__banner--content">
+                                    <h2 class="top__banner--title">Super saving gift card for new season</h2>
+                                    <p class="top__banner--text">Don't miss our limited-time offers! Discover current deals today!</p>
+                                    <button class="top__banner--btn">
+                                        View all
+                                        <img src="./assets/img/ic_round-arrow-foward.svg" alt="" srcset="">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <img class="top__banner--img" src="./assets/img/index/cover.png" alt="">
                             </div>
                         </div>
-                    </div>
+                    </section>
 
                     <!-- Funcitonal -->
                     <div class="index__functional">
-                        <ul class="index__functional--list row row-cols-5 row-cols-md-4 row-col-sm-3 row-cols-xs-2 g-2">
-                            <li class="col-2 col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6">
+                        <ul class="row row-cols-5 row-cols-md-3 row-cols-sm-3">
+                            <li class="col-2 col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 g-3">
                                 <a href="" class="index__functional--item">
                                     <div>
                                         <img src="./assets/img/index/function-1.png" alt="">
@@ -35,7 +45,7 @@
                                     Nạp rút nhanh chóng
                                 </a>
                             </li>
-                            <li class="col-2 col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6">
+                            <li class="col-2 col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 g-3">
                                 <a href="" class="index__functional--item">
                                     <div>
                                         <img src="./assets/img/index/function-2.png" alt="">
@@ -43,7 +53,7 @@
                                     Giảm giá sâu
                                 </a>
                             </li>
-                            <li class="col-2 col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6">
+                            <li class="col-2 col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 g-3">
                                 <a href="" class="index__functional--item">
                                     <div>
                                         <img src="./assets/img/index/function-3.png" alt="">
@@ -51,7 +61,7 @@
                                     Hoàn tiền
                                 </a>
                             </li>
-                            <li class="col-2 col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6">
+                            <li class="col-2 col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 g-3 offset-md-2">
                                 <a href="" class="index__functional--item">
                                     <div>
                                         <img src="./assets/img/index/function-4.png" alt="">
@@ -59,7 +69,7 @@
                                     Bảo mật
                                 </a>
                             </li>
-                            <li class="col-2 col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6">
+                            <li class="col-2 col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 g-3">
                                 <a href="" class="index__functional--item">
                                     <div>
                                         <img src="./assets/img/index/function-5.png" alt="">
@@ -78,27 +88,38 @@
                             pic2: "./assets/img/index/function-right.png" ,
                             bg1: "./assets/img/index/circle-1.png" ,
                             bg2: "./assets/img/index/circle-2.png",
-                            bannerClass: "split__banner"
+                            bannerClass: "split__banner",
+                            pic1Text: {
+                                title: "Card voucher hot news",
+                            },
+                            pic2Text: {
+                                title: "Card voucher hot news",
+                            },
+                            isShownPic2: false
                         } 
                     ) %>
 
                     <!-- Suggestion -->
                     <section class="index__sugestion">
+                        <div class="index__sugestion--title">
+                            <h2>Top Seller Top-up</h2>
+                            <p>Don't miss our limited-time offers! Discover current deals today!</p>
+                        </div>
                         <div class="index__sugestion--filter">
-                            <div class="row g-2 row-cols-6 row-cols-lg-5 row-cols-md-3 row-cols-xs-2">
-                                <div class="col-md-4 col-sm-4 col-xs-6">
+                            <div class="row gx-1 gy-2 row-cols-md-3">
+                                <div class="col gx-md-2 d-sm-none">
                                     <button class="filter__item">Hôm nay có gì</button>
                                 </div>
-                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                <div class="col gx-md-2">
+                                    <button class="filter__item">Tất cả</button>
+                                </div>
+                                <div class="col gx-md-2">
                                     <button class="filter__item">Gợi ý cho bạn</button>
                                 </div>
-                                <div class="col-md-4 col-sm-4 col-xs-6">
-                                    <button class="filter__item">Gợi ý cho bạn</button>
+                                <div class="col gx-md-2">
+                                    <button class="filter__item">Deal siêu hot</button>
                                 </div>
-                                <div class="col-md-4 col-sm-4 col-xs-6">
-                                    <button class="filter__item">Gợi ý cho bạn</button>
-                                </div>
-                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                <div class="col gx-md-2 d-sm-none">
                                     <button class="filter__item">Gợi ý cho bạn</button>
                                 </div>
                             </div>
@@ -180,6 +201,9 @@
                                 btnText: "Mua ngay"
                                 }, ]}) %>
                         </div>
+                        <div class="index__sugestion--more">
+                            <a href="">xem tất cả</a>
+                        </div>
                     </section>
 
 
@@ -227,7 +251,14 @@
                                 pic2: "./assets/img/index/category-2.png",
                                 bg1: "./assets/img/index/circle-1.png",
                                 bg2: "./assets/img/index/circle-2.png",
-                                bannerClass: "split__banner--mt0"
+                                bannerClass: "split__banner--mt0",
+                                pic1Text: {
+                                    title: "Card voucher hot news",
+                                },
+                                pic2Text: {
+                                    title: "Card voucher hot news",
+                                },
+                                isShownPic2: true
                             }
                         ) %>
                         
@@ -340,10 +371,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-9 col-xl-9 col-lg-4 col-md-12">
+                                <div class="col-9 col-xl-9 col-lg-4 col-md-12 g-md-3">
                                     <%- include("./partials/list-cards.ejs", { itemClass: "col-4 col-xl-4 col-lg-6 col-md-6 col-sm-6 col-xs-12" ,
                                         sideImg: "./assets/img/card-voucher.png" ,
-                                        colWithImg: "row row-cols-3 row-cols-xl-3 row-cols-lg-2 row-cols-md-3 row-cols-sm-2 row-cols-xs-1 g-1" ,
+                                        colWithImg: "row row-cols-3 row-cols-xl-3 row-cols-lg-2 row-cols-md-3 row-cols-sm-2 row-cols-xs-1 gx-1 gy-2 g-md-3" ,
                                         imgClass: "col-4 col-xl-4 col-lg-8 col-md-12" , recommendProduct: [ { id: 1, img: "./assets/img/index/newest-1.png" ,
                                         title: "Target Gift Card 50$ (US)- Order" , price: "120.000 ~ 134.000" , btnIcon: `<svg
                                         xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17" fill="none">
@@ -685,7 +716,7 @@
 
                 </div>
             </div>
-        </div>
+        </main>
         <!-- End Index -->
     
         <%- include("./partials/footer.ejs") %>

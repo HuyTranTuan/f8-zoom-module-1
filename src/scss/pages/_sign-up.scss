@@ -47,7 +47,6 @@
         font-style: normal;
         font-weight: 700;
         line-height: 3.2rem;
-        /* 133.333% */
         text-transform: uppercase;
     }
 }
@@ -59,6 +58,7 @@
         gap: 1.6rem;
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
+        align-items: center;
     }
 }
 .container__left--index{

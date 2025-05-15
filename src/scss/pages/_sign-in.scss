@@ -73,6 +73,14 @@
         padding-bottom: 1.2rem;
         padding-right: 2.5rem;
         padding-left: 2.5rem;
+        transition: color, outline, background-color;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+        &:hover{
+            color: variables.$primary-color;
+            background-color: variables.$white;
+            outline: 0.1rem solid variables.$primary-color;
+        }
     }
     
 }
@@ -142,6 +150,15 @@
     padding-right: 2.3rem;
     padding-left: 2.3rem;
     text-align: center;
+    transition: color, outline, background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+
+    &:hover {
+        color: variables.$primary-color;
+        background-color: variables.$white;
+        outline: 0.1rem solid variables.$primary-color;
+    }
     
 }
 

@@ -64,6 +64,11 @@ $secondary-color: #FFF4F1;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .product__card--price{

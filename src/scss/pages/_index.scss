@@ -162,7 +162,16 @@
             line-height: 1.5rem;
             text-decoration: none;
             text-align: center;
+            transition: color, background-color, outline;
+            transition-timing-function: ease-in;
+            transition-duration: 0.3s;
         }
+        a:hover{
+            color: variables.$white;
+            background-color: variables.$primary-color;
+            outline: 0.1rem solid variables.$primary-color;
+        }
+
     }
 
     &--title{
@@ -558,6 +567,9 @@
         div {
             width: 5rem;
             height: 5rem;
+            img{
+                width: 3rem;
+            }
         }
     }
     .index__sugestion--filter {

@@ -21,6 +21,7 @@ $secondary-color: #FFF4F1;
     border-radius: 3rem;
     border: 1px solid $primary-light-color;
     background: $white;
+    position: relative;
 }
 
 .product__card--img{
@@ -29,29 +30,37 @@ $secondary-color: #FFF4F1;
     border-radius: 2rem;
     overflow: hidden;
     display: block;
-    position: relative;
     img{
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-    svg{
-        position: absolute;
-        display: block;
-        top: 1rem;
-        right: 1rem;
-        width: 2.4rem;
-        height: 2.4rem;
-        background: $white;
-        border-radius: 50%;
-        font-size: 1.6rem;
-        padding: 0.4rem;
-        &:hover{
-            background: $primary-color;
-            path{
-                fill: $white;
-            }
+}
+.product__card--favbtn {
+    position: absolute;
+    display: inline-block;
+    top: 2rem;
+    right: 2rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: $white;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    padding: 0.4rem;
+    transition: background;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    img{
+        transition: filter;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+    }
+
+    &:hover {
+        background: $primary-color;
+        img{
+            filter: invert(86%) sepia(21%) saturate(761%) hue-rotate(92deg) brightness(200%) contrast(107%);
         }
     }
 }
@@ -101,17 +110,16 @@ $secondary-color: #FFF4F1;
     align-items: center;
     gap: 0.5rem;
     text-decoration: none;
-    path{
-        transition: fill, stroke;
+    img{
+        transition: filter;
         transition-duration: 0.3s;
         transition-timing-function: ease-in;
     }
     &:hover{
         color: $white;
         background-color: $primary-color;
-        path{
-            fill: $white;
-            stroke: $white;
+        img{
+            filter: invert(86%) sepia(21%) saturate(761%) hue-rotate(92deg) brightness(200%) contrast(107%);
         }
     }
 }

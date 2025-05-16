@@ -2,9 +2,13 @@
  bg__orange
 <% } %> ">
     <h2><%= title %></h2>
-    <div class="remote-btn">
+    <div class="section__remote--btn">
         <span><%= all %></span>
-        <%- btnBack %>
-        <%- btnFoward %>
+        <button class="section__btn-back">
+            <img src="<%- btnBack %>" alt="">
+        </button>
+        <button class="section__btn-foward">
+            <img src="<%- btnFoward %>" alt="">
+        </button>
     </div>
 </div>

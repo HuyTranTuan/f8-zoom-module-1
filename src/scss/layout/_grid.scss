@@ -50,7 +50,7 @@ html {
 }
 
 .row[class*="row-cols-"]>* {
-    width: calc(100% / var(--row-cols-number))!important;
+    width: calc(100% / var(--row-cols-number));
 }
 
 .row>[class*="col-"] {

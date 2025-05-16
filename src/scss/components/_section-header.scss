@@ -12,7 +12,7 @@
         line-height: normal;
     }
 }
-.remote-btn{
+.section__remote--btn{
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -26,18 +26,33 @@
         font-weight: 500;
         line-height: 2.4rem;
     }
-    svg{
+    button{
         width: 3rem;
         height: 3rem;
         background-color: variables.$primary-light-color;
         border-radius: 50%;
-        fill: variables.$white;
-        &:hover path{
-            fill: variables.$primary-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+        &.section__btn-back{
+            rotate: 180deg;
         }
-
+        img {
+            width: 2.4rem;
+            height: 2.4rem;
+            transition: filter;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in;
+        }
         &:hover{
             cursor: pointer;
+            background-color: variables.$primary-color;
+            img {
+                filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(200%) contrast(200%);
+            }
         }
     }
 }
@@ -57,23 +72,26 @@
         font-weight: 600;
         line-height: 2.8rem;
     }
-    .remote-btn{
+    .section__remote--btn{
         gap: 1rem;
         span{
             display: none;
         }
+    }
+    button {
+        background-color: variables.$white;
 
-        svg{
-            background-color: variables.$white;
-            path{
-                fill: variables.$primary-color;
-            }
+        img {
+            transition: filter;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in;
+        }
 
-            &:hover{
-                background-color: variables.$primary-color;
-                path{
-                    fill: variables.$white;
-                }
+        &:hover {
+            background-color: variables.$primary-color;
+
+            img {
+                filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(200%) contrast(200%);
             }
         }
     }
@@ -88,12 +106,12 @@
         }
     }
 
-    .remote-btn {
+    .section__remote--btn {
         span {
             display: none;
         }
 
-        svg {
+        button {
             width: 2.7rem;
             height: 2.7rem;
         }
@@ -104,12 +122,12 @@
             line-height: 2.6rem;
         }
 
-        .remote-btn {
+        .section__remote--btn {
             span {
                 display: none;
             }
 
-            svg {
+            button {
                 width: 1.9rem;
                 height: 1.9rem;
             }

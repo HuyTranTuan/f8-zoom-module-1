@@ -1,10 +1,27 @@
 @use "../variables" as *;
 
+.account-wrapper{
+    padding-top: 12rem;
+    padding-bottom: 5.5rem;
+    position: relative;
+}
+.account__wrapper--background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 22.8rem;
+    background-image: url(./assets/img/account/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .account__container{
     display: flex;
     gap: 2.4rem;
-    margin-top: 12rem;
-    margin-bottom: 5.5rem;
+    position: relative;
+    z-index: 1;
 }
 
 .account__info{
@@ -13,6 +30,7 @@
     border: 0.1rem solid $grey;
     padding-left: 4.6rem;
     padding-right: 4.6rem;
+    background-color: $white;
 }
 .account__overview{
     width: calc(100% / 3 * 2);
@@ -22,6 +40,7 @@
     padding-right: 4rem;
     padding-bottom: 4rem;
     padding-top: 6rem;
+    background-color: $white;
 }
 
 // 
@@ -40,7 +59,7 @@
         height: 100%;
         border-radius: 50%;
         object-fit: cover;
-        object-position: center top;
+        object-position: 70% top;
     }
     .account__info--changeavt{
         width: 2.4rem;
@@ -64,6 +83,7 @@
 }
 .account__info--context{
     text-align: center;
+    border-bottom: 0.1rem solid $grey;
 }
 .account__info--name{
     margin-top: 2.4rem;
@@ -95,7 +115,6 @@
 .account__info__funcitonal--list{
     padding-top: 4rem;
     padding-bottom: 8.6rem;
-    border-top: 0.1rem solid $grey;
 }
 .account__info__functional--item{
     display: flex;
@@ -263,7 +282,17 @@
 
 @media (max-width: 1199.98px) {}
 
-@media (max-width: 991.98px) {}
+@media (max-width: 991.98px) {
+    .account__container{
+        flex-direction: column;
+    }
+    .account__info{
+        width: 100%;
+    }
+    .account__overview{
+        width: 100%;
+    }
+}
 
 @media (max-width: 767.98px) {}
 

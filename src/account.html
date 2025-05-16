@@ -7,8 +7,10 @@
     <%- include("./partials/head.ejs") %>
 </head>
 <body>
+    <%- include("./partials/header.ejs") %>
     <div class="account-wrapper">
-        <%- include("./partials/header.ejs") %>
+        <div class="account__wrapper--background">
+        </div>
         <div class="container">
             <main class="account__container">
                 <section class="account__info">
@@ -88,9 +90,8 @@
                 </section>
             </main>
         </div>
-    
-        <%- include("./partials/footer.ejs") %>
     </div>
+    <%- include("./partials/footer.ejs") %>
     <script type="module" src="./main.js"></script>
 </body>
 </html>

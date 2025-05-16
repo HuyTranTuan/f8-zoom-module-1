@@ -5,18 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="./assets/img/favicon/site.webmanifest">
+    <!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="./assets/img/favicon/site.webmanifest">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
-        rel="stylesheet">
-  <script type="module" crossorigin src="/f8-zoom-module-1/assets/main-BnRca0AP.js"></script>
-  <link rel="stylesheet" crossorigin href="/f8-zoom-module-1/assets/main-A0WkobSK.css">
+
+<!-- Google font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet">
+  <script type="module" crossorigin src="/f8-zoom-module-1/assets/main-wKVCANIj.js"></script>
+  <link rel="stylesheet" crossorigin href="/f8-zoom-module-1/assets/main-DaUwrshP.css">
 </head>
 
 <body>
@@ -354,14 +357,300 @@
 
 </header>
 <!-- End Header -->
-    
+        <div class="container">
+            <main class="payment-wrapper">
+                <!-- Payment Method -->
+                <section class="payment__method">
+                    <h2 class="payment__head--title">CHỌN HÌNH THỨC THANH TOÁN</h2>
+                    <!-- Payment Online -->
+                    <article class="payment__online payment__method--top payment__article">
+                        <h3 class="payment__title">Online Payment</h3>
+                        <form action="" class="row payment__container">
+                            <div class="col-8 col-xl-8 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="payment__online--formgroup">
+                                    <input type="checkbox" id="payment__online--visa">
+                                    <label for="payment__online--visa">
+                                        Credit/Debit Card (VND)
+                                        <div class="payment__online--img">
+                                            <img src="./assets/img/payment/visa.png" alt="">
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-4 col-xl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12 g-lg-3">
+                                <div class="payment__online--formgroup">
+                                    <input type="checkbox" id="payment__online--paypal">
+                                    <label for="payment__online--paypal">
+                                        Paypal
+                                        <div class="payment__online--img">
+                                            <img src="./assets/img/payment/paypal.png" alt="">
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+
+                    </article>
+                    <!-- End Payment Online -->
+
+                    <!-- Payment Online Bank -->
+                    <article class="onlinebank payment__article">
+                        <h3 class="payment__title">Online Payment</h3>
+                        <form action="" class="row payment__container">
+                            <div class="col-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="onlinebank--formgroup">
+                                    <input type="checkbox" id="onlinebank__donga">
+                                    <label for="onlinebank__donga">
+                                        DongA Bank
+                                        <div class="onlinebank--img">
+                                            <img src="./assets/img/payment/donga-bank.png" alt="">
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12 g-lg-3">
+                                <div class="onlinebank--formgroup">
+                                    <input type="checkbox" id="onlinebank--vietcom">
+                                    <label for="onlinebank--vietcom">
+                                        Vietcombank
+                                        <div class="onlinebank--img">
+                                            <img src="./assets/img/payment/vietcom-bank.png" alt="">
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12 g-lg-3">
+                                <div class="onlinebank--formgroup">
+                                    <input type="checkbox" id="onlinebank--mb">
+                                    <label for="onlinebank--mb">
+                                        MBbank
+                                        <div class="onlinebank--img">
+                                            <img src="./assets/img/payment/mb-bank.png" alt="">
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12 g-lg-3">
+                                <div class="onlinebank--formgroup">
+                                    <input type="checkbox" id="onlinebank--bidv">
+                                    <label for="onlinebank--bidv">
+                                        BIDV bank
+                                        <div class="onlinebank--img">
+                                            <img src="./assets/img/payment/bidv-bank.png" alt="">
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12 g-lg-3">
+                                <div class="onlinebank--formgroup">
+                                    <input type="checkbox" id="onlinebank--vietin">
+                                    <label for="onlinebank--vietin">
+                                        Vietinbank
+                                        <div class="onlinebank--img">
+                                            <img src="./assets/img/payment/vietin-bank.png" alt="">
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12 g-lg-3">
+                                <div class="onlinebank--formgroup">
+                                    <input type="checkbox" id="onlinebank--agri">
+                                    <label for="onlinebank--agri">
+                                        Agribank
+                                        <div class="onlinebank--img">
+                                            <img src="./assets/img/payment/agri-bank.png" alt="">
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </article>
+                    <!-- End Payment Online Bank -->
+
+                    <!-- Payment Online Bank Transfer -->
+                    <article class="onlinebank__transfer payment__article">
+                        <h3 class="payment__title">Offline payment/ Cash/ Manual Bank Transfer</h3>
+                        <form action="" class="row payment__container">
+                            <div class="col-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="onlinebank__transfer--formgroup">
+                                    <input type="checkbox" id="onlinebank__transfer__donga">
+                                    <label for="onlinebank__transfer__donga">
+                                        <p>
+                                            DongA Bank
+                                            <br><span>Thanh toán tại quầy giao dịch</span>
+                                        </p>
+                                        <div class="onlinebank__transfer--img">
+                                            <img src="./assets/img/payment/donga-bank.png" alt="">
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="onlinebank__transfer--formgroup">
+                                    <input type="checkbox" id="onlinebank__transfer--vietcom">
+                                    <label for="onlinebank__transfer--vietcom">
+                                        <p>
+                                            Vietcombank
+                                            <br><span>Thanh toán tại quầy giao dịch</span>
+                                        </p>
+                                        <div class="onlinebank__transfer--img">
+                                            <img src="./assets/img/payment/vietcom-bank.png" alt="">
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="onlinebank__transfer--formgroup">
+                                    <input type="checkbox" id="onlinebank__transfer--mb">
+                                    <label for="onlinebank__transfer--mb">
+                                        <p>
+                                            MBbank
+                                            <br><span>Thanh toán tại quầy giao dịch</span>
+                                        </p>
+                                        <div class="onlinebank__transfer--img">
+                                            <img src="./assets/img/payment/mb-bank.png" alt="">
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="onlinebank__transfer--formgroup">
+                                    <input type="checkbox" id="onlinebank__transfer--bidv">
+                                    <label for="onlinebank__transfer--bidv">
+                                        <p>
+                                            BIDV bank
+                                            <br><span>Thanh toán tại quầy giao dịch</span>
+                                        </p>
+                                        <div class="onlinebank__transfer--img">
+                                            <img src="./assets/img/payment/bidv-bank.png" alt="">
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="onlinebank__transfer--formgroup">
+                                    <input type="checkbox" id="onlinebank__transfer--vietin">
+                                    <label for="onlinebank__transfer--vietin">
+                                        <p>
+                                            Vietinbank
+                                            <br><span>Thanh toán tại quầy giao dịch</span>
+                                        </p>
+                                        <div class="onlinebank__transfer--img">
+                                            <img src="./assets/img/payment/vietin-bank.png" alt="">
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="onlinebank__transfer--formgroup">
+                                    <input type="checkbox" id="onlinebank__transfer--agri">
+                                    <label for="onlinebank__transfer--agri">
+                                        <p>
+                                            Agribank
+                                            <br><span>Thanh toán tại quầy giao dịch</span>
+                                        </p>
+                                        <div class="onlinebank__transfer--img">
+                                            <img src="./assets/img/payment/agri-bank.png" alt="">
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </article>
+                    <!-- End Payment Online Bank Transfer -->
+
+                    <!-- Payment Card -->
+                    <article class="payment__card payment__article">
+                        <h3 class="payment__title">Thẻ cào</h3>
+                        <div class="payment__container">
+                            <div class="row row-cols-5 row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-3 row-cols-xs-2 gx-3">
+                                <div class="col g-3">
+                                    <div class="payment__card--item">
+                                        <p class="payment__card--brand">Viettel</p>
+                                        <p class="payment__card--discount">Chiết khấu 15%</p>
+                                    </div>
+                                </div>
+                                <div class="col g-3">
+                                    <div class="payment__card--item">
+                                        <p class="payment__card--brand">Mobifone</p>
+                                        <p class="payment__card--discount">Chiết khấu 15%</p>
+                                    </div>
+                                </div>
+                                <div class="col g-3">
+                                    <div class="payment__card--item">
+                                        <p class="payment__card--brand">Vinaphone</p>
+                                        <p class="payment__card--discount">Chiết khấu 15%</p>
+                                    </div>
+                                </div>
+                                <div class="col g-3">
+                                    <div class="payment__card--item">
+                                        <p class="payment__card--brand">Garena</p>
+                                        <p class="payment__card--discount">Chiết khấu 15%</p>
+                                    </div>
+                                </div>
+                                <div class="col g-3">
+                                    <div class="payment__card--item">
+                                        <p class="payment__card--brand">Zing</p>
+                                        <p class="payment__card--discount">Chiết khấu 15%</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="payment__card--warnning">
+                                <h3><img src="./assets/img/warnning.svg" alt=""> Bạn phải nạp ít nhất (Tổng tiền + chiết khấu)</h3>
+                                <ul>
+                                    <li>Bạn vui lòng chuyển sang trang Nạp tiền bằng thẻ cào để thêm số dư vào tài khoản. Sau đó quay lại trang Giỏ hàng để hoàn
+                                    tất thanh toán bằng số dư.</li>
+                                    <li>Giao dịch qua thẻ cào sẽ mất thêm phí chiết khấu và thời gian duyệt đơn lâu hơn so với chuyển khoản qua ngân hàng. Đi
+                                    đến trang Nạp tiền qua tài khoản ngân hàng</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </article>
+                    <!-- End Payment Card -->
+
+
+                    <!-- Payment QR -->
+                    <article class="payment__qr payment__article">
+                        <h3 class="payment__title">Mã QR code</h3>
+                        <div class="payment__container">
+                            <a href="" class="payment__qr--link">
+                                <img src="./assets/img/payment/vietqr.png" alt="">
+                            </a>
+                            <a href="" class="payment__qr--link">
+                                <img src="./assets/img/payment/vnpayqr.png" alt="">
+                            </a>
+                        </div>
+                    </article>
+                    <!-- End Payment Card -->
+                </section>
+                <!-- End Payment Method -->
+
+                <!-- Payment Info -->
+                <section class="payment__info">
+                    <h2 class="payment__head--title">THÔNG TIN THANH TOÁN</h2>
+                    <section class="payment__info--content">
+                        <h3>Details payment</h3>
+                        <div class="payment__info--item">
+                            <p>Tổng tiền trước giảm giá <span>120.23&nbsp;đ</span></p>
+                            <p>Giảm giá <span>-10.000&nbsp;đ</span></p>
+                        </div>
+                        <div class="payment__info--item">
+                            <p>Tổng tiền <span class="payment__info--total">120.23&nbsp;đ</span></p>
+                        </div>
+                        <a href="" class="payment__info--btn">Thanh toán</a>
+                    </section>
+                </section>
+                <!-- End Payment Info -->
+            </main>
+        </div>
     
         <!-- Footer -->
 <footer class="footer">
     <div class="footer-wrapper">
         <div class="container">
             <div class="footer__content">
-                <div class="row g-3">
+                <div class="row g-3 g-sm-2">
                     <div class="col-2 col-xl-2 col-lg-3 col-md-4 col-sm-12 col-xs-12">
                         <h3>About us</h3>
                         <ul class="footer__nav">

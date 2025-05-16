@@ -1,7 +1,263 @@
-@use "../variables";
+@use "../variables" as *;
 
+.account__container{
+    display: flex;
+    gap: 2.4rem;
+    margin-top: 12rem;
+    margin-bottom: 5.5rem;
+}
 
+.account__info{
+    width: calc(100% / 3 * 1);
+    border-radius: 2rem;
+    border: 0.1rem solid $grey;
+    padding-left: 4.6rem;
+    padding-right: 4.6rem;
+}
+.account__overview{
+    width: calc(100% / 3 * 2);
+    border-radius: 2rem;
+    border: 0.1rem solid $grey;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 4rem;
+    padding-top: 6rem;
+}
 
+// 
+// account info
+// 
+.account__info--avatar{
+    margin-top: 5.8rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 17.2rem;
+    height: 17.2rem;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    & > img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center top;
+    }
+    .account__info--changeavt{
+        width: 2.4rem;
+        height: 2.4rem;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        background-color: $primary-color;
+        outline: 0.3rem solid $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        z-index: 5;
+        img{
+            width: 1.4rem;
+            height: 1.4rem;
+        }
+    }
+}
+.account__info--context{
+    text-align: center;
+}
+.account__info--name{
+    margin-top: 2.4rem;
+    color: $light-black;
+    font-family: $font-quicksand;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.account__info--view{
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 0.8rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+    background-color: $primary-light-color;
+    color: $light-black;
+    font-family: $font-inter;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 2rem;
+    margin-bottom: 2.8rem;
+}
+.account__info__funcitonal--list{
+    padding-top: 4rem;
+    padding-bottom: 8.6rem;
+    border-top: 0.1rem solid $grey;
+}
+.account__info__functional--item{
+    display: flex;
+    text-decoration: none;
+    gap: 2.4rem;
+    border-radius: 2rem;
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    box-shadow: -0.5rem 0.4rem 1.73rem 0rem rgba(248, 248, 248, 0.50);
+    color: $light-black;
+    font-family: $font-quicksand;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    transition: color, background-color;
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
+    .item__icon--cover{
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+    }
+
+    &:hover{
+        background-color: $secondary-color;
+        color: $primary-color;
+        .item__icon--cover{
+            background-color: $primary-color;
+        }
+        img{
+            filter: brightness(500%);
+        }
+    }
+}
+// 
+// account overview
+// 
+.account__overview--content{
+    h2{
+        color: $light-black;
+        font-family: $font-quicksand;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+}
+.account__overview--info{
+    margin-top: 2.4rem;
+    display: flex;
+    gap: 4rem;
+}
+.overview__info--container{
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+    padding-left: 2.6rem;
+    padding-right: 2.6rem;
+    border-radius: 2rem;
+    border: 0.1rem solid $dark-grey;
+    flex: 1;
+    .account__balance--header{
+        margin-bottom: 2.5rem;
+    }
+    h3{
+        color: $light-black;
+        font-family: $font-quicksand;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+}
+.account__balance--info{
+    padding-top: 4.2rem;
+    border-top: 0.1rem solid $dark-grey;
+    display: flex;
+    justify-content: space-between;
+    .account__balance--btn{
+        border-radius: 10rem;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $light-black;
+        font-family: $font-inter;
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: none;
+        background-color: $secondary-color;
+    }
+    .account__balance--money{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.2rem;
+        color: $primary-color;
+        font-family: $font-quicksand;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+}
+.account__historybuy--info{
+    margin-top: 5.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p{
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: center;
+        color: $dark-gray;
+        text-align: center;
+        font-family: $font-quicksand;
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        span{
+            font-size: 2rem;
+            color: $primary-color;
+        }
+    }
+}
+.account__history--header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+.account__historybuy--btn{
+    display: block;
+    top: 1rem;
+    right: 1rem;
+    text-decoration: none;
+    color: $gray;
+    font-family: $font-inter;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    &:hover{
+        color: $primary-color;
+    }
+}
 
 @media (max-width: 1399.98px) {}
 

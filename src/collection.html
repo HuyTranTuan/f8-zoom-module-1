@@ -250,7 +250,137 @@
 
                 <!-- Collection right -->
                 <div class="collection__right">
-                    <div class="collection__showing">Showing 1-12</div>
+                    <div class="collection__filter--small d-none d-sm-flex">
+                        <div class="collection__filter--smallmenu">
+                            <img src="./assets/img/select.svg" alt="">
+                        </div>
+                        <div class="collection__background--filter"></div>
+                        <section class="collection__filter--popuplist">
+                            <div class="collection__filter__popuplist--header">
+                                <h2>List Card voucher</h2>
+                                <button>X</button>
+                            </div>
+                            <ul class="collection__filter__popuplist--body">
+                                <li>
+                                    <a href="" class="collection__filter__popuplist--item">
+                                        Mobile Game Cards
+                                        <span>5</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="collection__filter__popuplist--item">
+                                        Game Cards
+                                        <span>10</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="collection__filter__popuplist--item">
+                                        Payment Cards
+                                        <span>12</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="collection__filter__popuplist--item">
+                                        Gift Cards
+                                        <span>30</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="collection__filter__popuplist--item">
+                                        Game Console
+                                        <span>49</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="collection__filter__popuplist--item">
+                                        Game CD-Key
+                                        <span>33</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="collection__filter__popuplist--item">
+                                        Video Streaming
+                                        <span>34</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="collection__filter__popuplist--item">
+                                        Music
+                                        <span>56</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="collection__filter__popuplist--item">
+                                        Shopping
+                                        <span>1</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="collection__filter__popuplist--item">
+                                        Telco Prepaid Cards
+                                        <span>34</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="collection__filter__popuplist--item">
+                                        Tools
+                                        <span>5</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="collection__filter__popuplist--item">
+                                        Software
+                                        <span>6</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="collection__filter__popuplist--item">
+                                        Social App
+                                        <span>9</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="collection__filter__popuplist--item">
+                                        Freebie Codes
+                                        <span>10</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="collection__filter__popuplist--item">
+                                        Subscript
+                                        <span>11</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <ul class="collection__breadcrumb">
+                            <li>
+                                <a href="" class="collection__breadcrumb-item">
+                                    Card Voucher
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="collection__breadcrumb-item">
+                                    Mobile card
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="collection__showing">
+                        <span>Showing 1-12</span>
+                        <div class="collection__sort-dropdown d-none d-sm-flex">
+                            Sort by latest
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                                <path d="M0.81958 1.31907L4.66164 5.16113L8.5037 1.31907" stroke="#AEAEAE" stroke-width="1.19531"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <ul >
+                                <li>Sort by latest</li>
+                                <li>Sort by newest</li>
+                            </ul>
+                        </div>
+                    </div>
                     <div class="collection__container">
                          <%- include("./partials/list-cards.ejs",{
                             itemClass: "col",

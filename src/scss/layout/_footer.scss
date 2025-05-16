@@ -112,4 +112,39 @@ $secondary-color: #FFF4F1;
             }
         }
     }
+    .footer__content {
+        margin-top: 1.5rem;
+
+        h3 {
+            font-size: 1.8rem;
+            margin-top: 3rem;
+        }
+
+        .footer__nav {
+            margin-top: 1.5rem;
+        }
+
+        .footer__nav--item {
+            font-size: 1.4rem;
+            line-height: normal;
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+        }
+    }
+
+    .footer__company {
+        margin-top: 1rem;
+
+        p,
+        a {
+            font-size: 1.4rem;
+            line-height: normal;
+            margin-top: 1.5rem;
+        }
+    }
+
+    .footer__copyright {
+        height: 5rem;
+        margin-top: 3rem;
+    }
 }

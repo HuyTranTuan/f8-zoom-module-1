@@ -232,13 +232,206 @@
 //==================================================================================//
 //==============================Collection Right====================================//
 //==================================================================================//
+.collection__filter--small{
+    display: flex;
+    align-self: center;
+    gap: 1.2rem;
+    .collection__filter--smallmenu{
+        background-color: $primary-color;
+        display: inline-block;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: 1rem;
+        width: 4rem;
+        text-align: center;
+        img {
+            filter: invert(60%) sepia(0%) saturate(761%) hue-rotate(92deg) brightness(300%) contrast(107%);
+        }
+        &:hover ~ .collection__background--filter{
+            visibility: visible;
+            opacity: 1;
+        }
+        &:hover ~ .collection__filter--popuplist{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    .collection__breadcrumb{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        li{
+            display: flex;
+            align-self: center;
+        }
+        li + li::before{
+            content: ">";
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            color: $dark-gray;
+            line-height: 1.4rem;
+        }
+        
+    }
+    .collection__breadcrumb-item{
+        color: $dark-gray;
+        font-family: $font-manrorpe;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-decoration: none;
+        display: block;
+    }
+    .collection__background--filter{
+        visibility: hidden;
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+        width: 100vw;
+        height: 100vh;
+        background: #909090;
+        mix-blend-mode: multiply;
+        transition: visibility, opacity;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+    }
+    .collection__filter--popuplist{
+        visibility: hidden;
+        opacity: 0;
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 10;
+        background: $white;
+        border-radius: 2rem;
+        min-width: 25rem;
+        height: 45rem;
+        overflow-y: auto;
+        transition: visibility, opacity;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+    }
+    .collection__filter__popuplist--header {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        padding-left: 2.7rem;
+        padding-right: 2.7rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 0.1rem solid $dark-grey;
+        h2 {
+            color: $light-black;
+            font-family: $font-quicksand;
+            font-size: 1.5rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+    }
+
+    .collection__filter__popuplist--body {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        padding-left: 2.7rem;
+        padding-right: 2.7rem;
+        a {
+            display: flex;
+            justify-content: space-between;
+            text-decoration: none;
+            color: $light-black;
+            font-family: $font-quicksand;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 3.2rem;
+            span{
+                color: $gray;
+            }
+            &:hover{
+                color: $primary-color;
+            }
+        }
+    }
+
+}
+
 .collection__showing{
-    color: $light-black;
-    font-family: $font-manrorpe;
-    font-size: 1.472rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.7rem;
+    span{
+        color: $light-black;
+        font-family: $font-manrorpe;
+        font-size: 1.472rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+}
+.collection__sort-dropdown {
+    position: relative;
+    z-index: 5;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+    padding-left: 0.97rem;
+    padding-right: 0.97rem;
+    border: 0.1rem solid $dark-grey;
+    ul {
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0%;
+        opacity: 0;
+        visibility: hidden;
+        scale: 0;
+        transform-origin: 0% 0%;
+        transition: visibility, opacity, scale;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+        background-color: $white;
+        overflow: hidden;
+        &:hover{
+            visibility: visible;
+            opacity: 1;
+            scale: 1;
+        }
+        li{
+            padding-top: 0.65rem;
+            padding-bottom: 0.65rem;
+            padding-left: 0.97rem;
+            padding-right: 0.97rem;
+            color: $light-black;
+            font-family: $font-manrorpe;
+            font-size: 1.472rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            display: block;
+            transition: background-color, color;
+            transition-duration: 0.3s;
+            transition-timing-function: ease;
+            &:hover{
+                background-color: $primary-color;
+                color: $white;
+            }
+        }
+    }
+
+    &:hover ul {
+        visibility: visible;
+        opacity: 1;
+        scale: 1;
+    }
 }
 
 .collection__pagination{
@@ -342,6 +535,8 @@
     .collection__content {
         display: flex;
         flex-direction: column-reverse;
+        margin-top: 2rem;
+        margin-bottom: 5rem;
     }
     .collection__right {
         width: 100%;
@@ -384,8 +579,23 @@
     }
 }
 @media (max-width: 767.98px) {
+    .collection__pagination{
+        margin-top: 20rem;
+    }
     
 }
 @media (max-width: 575.98px) {
-    
+    .collection__pagination{
+        margin-top: 15rem;
+    }
+
+    .collection__pagination--item {
+        width: 3.5rem !important;
+        height: 3.5rem !important;
+        font-size: 1.8rem !important;
+    }
+
+    .collection__pagination--list {
+        gap: 1rem !important;
+    }
 }

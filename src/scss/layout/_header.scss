@@ -1,19 +1,9 @@
 @use "../variables" as *;
 
-$font-inter: "Inter", sans-serif;
-$font-quicksand: "Quicksand", sans-serif;
-$font-poppins: "Poppins", sans-serif;
-$font-manrorpe: "Manrope", sans-serif;
-
-$white: #FFFFFF;
-$black: #000;
-$light-black: #323232;
-$dark-gray: #5C5C5C;
-$gray: #AEAEAE;
-$grey: #F2F2F2;
-$primary-color: #ED5A25;
-$primary-light-color: #FFDBCE;
-$secondary-color: #FFF4F1;
+header {
+    border-bottom: 0.1rem solid $dark-grey;
+    box-shadow: 0px 4.206px 11.25px 0px rgba(244, 244, 244, 0.50);
+}
 
 .header__top {
     background-color: $primary-color;
@@ -655,8 +645,9 @@ nav.header__nav {
 }
 
 @media (max-width: 767.98px){
-    nav.header__nav--vertical{
-        
+    header {
+        border-bottom: 0.1rem solid $dark-grey;
+        box-shadow: 0px 4.206px 11.25px 0px rgba(244, 244, 244, 0.50);
     }
     .header__nav--logo {
         display: flex;

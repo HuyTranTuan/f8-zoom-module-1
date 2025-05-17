@@ -13,7 +13,9 @@ export default defineConfig({
                 index: path.resolve(__dirname, "src/index.html"),
                 collection: path.resolve(__dirname, "src/collection.html"),
                 account: path.resolve(__dirname, "src/account.html"),
+                myaccount: path.resolve(__dirname, "src/myaccount.html"),
                 payment: path.resolve(__dirname, "src/payment.html"),
+                transactionhistory: path.resolve(__dirname, "src/transaction-history.html"),
                 signin: path.resolve(__dirname, "src/sign-in.html"),
                 signup: path.resolve(__dirname, "src/sign-up.html"),
             }

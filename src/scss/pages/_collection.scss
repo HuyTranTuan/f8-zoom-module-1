@@ -233,7 +233,6 @@
 //==============================Collection Right====================================//
 //==================================================================================//
 .collection__filter--small{
-    display: flex;
     align-self: center;
     gap: 1.2rem;
     .collection__filter--smallmenu{
@@ -315,6 +314,14 @@
         transition: visibility, opacity;
         transition-duration: 0.3s;
         transition-timing-function: ease;
+        &:hover{
+            visibility: visible;
+            opacity: 1;
+        }
+        &:hover ~ .collection__background--filter{
+            opacity: 1;
+            visibility: visible;
+        }
     }
     .collection__filter__popuplist--header {
         padding-top: 2.5rem;

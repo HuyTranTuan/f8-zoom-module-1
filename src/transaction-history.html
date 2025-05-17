@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account</title>
+    <%- include("./partials/head.ejs") %>
+</head>
+
+<body>
+    <%- include("./partials/header.ejs") %>
+        <div class="account-wrapper">
+            <div class="account__wrapper--background">
+            </div>
+            <div class="container transaction__history__account-wrapper">
+                <main class="account__container transaction__history__account--container">
+                    <section class="account__info transaction__history__account--info d-sm-none">
+                        <div class="account__info--avatar">
+                            <img src="./assets/img/account/avatar.png" alt="">
+                            <div class="account__info--changeavt d-sm-none">
+                                <img src="./assets/img/account/camera.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="account__info--context">
+                            <h1 class="account__info--name">Nguyễn Xuân Việt</h1>
+                            <a href="./account.html" class="account__info--view">Thông tin tài khoản</a>
+                        </div>
+
+
+
+                        <ul class="account__info__funcitonal--list">
+                            <li>
+                                <a href="./myaccount.html" class="account__info__functional--item">
+                                    <div class="item__icon--cover">
+                                        <img src="./assets/img/account/user.svg" alt="">
+                                    </div>
+                                    My account
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="account__info__functional--item">
+                                    <div class="item__icon--cover">
+                                        <img src="./assets/img/account/topup.svg" alt="">
+                                    </div>
+                                    Topup
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./transaction-history.html" class="account__info__functional--item">
+                                    <div class="item__icon--cover">
+                                        <img src="./assets/img/account/history.svg" alt="">
+                                    </div>
+                                    Transaction History
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="account__info__functional--item">
+                                    <div class="item__icon--cover">
+                                        <img src="./assets/img/account/inventory.svg" alt="">
+                                    </div>
+                                    Inventory
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="account__info__functional--item">
+                                    <div class="item__icon--cover">
+                                        <img src="./assets/img/account/favorite.svg" alt="">
+                                    </div>
+                                    My Favorite
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="account__overview transaction__history__account--overview">
+                        <div class="account__overview--content">
+                            <div class="account__overview--header d-none d-sm-flex">
+                                <a href="./account.html">&lt;</a>
+                                <h2>Đơn hàng</h2>
+                            </div>
+                            <h2 class="d-sm-none">Đơn hàng</h2>
+                            <div class="account__overview--context d-none d-sm-block">
+                                <span>Avatar</span>
+                                <div class="account__overview--avatar">
+                                    <img src="./assets/img/account/avatar.png" alt="">
+                                </div>
+                                <button class="account__overview--changeavtbtn">Change photo</button>
+                            </div>
+
+                            <div class="transaction__history--container">
+                                <form action="" class="transaction__history--search">
+                                    <input type="search" name="" id="" placeholder="Tìm kiếm">
+                                    <button type="submit" class="transaction__history--searchicon">
+                                        <img src="./assets/img/gg_search.svg" alt="">
+                                    </button>
+                                </form>
+                                <div class="transaction__history--list">
+                                    <article class="transaction__history--item">
+                                        <div class="transaction__history--context">
+                                            <a href="" class="transaction__history__item--img">
+                                                <img src="./assets/img/transaction/product.png" alt="">
+                                            </a>
+                                            <div class="transaction__history__item--context">
+                                                <h2>Steam Wallet Code 75,000 VND</h2>
+                                                <p>SKU: </p>
+                                            </div>
+                                        </div>
+                                        <div class="transaction__history__item--quantity">
+                                            <span class="transaction__history__quantity--text">SL: 1</span>
+                                        </div>
+                                        <div class="transaction__history__item--price">
+                                            <span class="transaction__history__price--text">79,879</span>
+                                        </div>
+                                        <div class="transaction__history__item--status">
+                                            <span class="serving-text">Đang phục vụ</span>
+                                        </div>
+                                    </article>
+                                    <article class="transaction__history--item">
+                                        <div class="transaction__history--context">
+                                            <a href="" class="transaction__history__item--img">
+                                                <img src="./assets/img/transaction/product.png" alt="">
+                                            </a>
+                                            <div class="transaction__history__item--context">
+                                                <h2>Steam Wallet Code 75,000 VND</h2>
+                                                <p>SKU: </p>
+                                            </div>
+                                        </div>
+                                        <div class="transaction__history__item--quantity">
+                                            <span class="transaction__history__quantity--text">SL: 1</span>
+                                        </div>
+                                        <div class="transaction__history__item--price">
+                                            <span class="transaction__history__price--text">79,879</span>
+                                        </div>
+                                        <div class="transaction__history__item--status">
+                                            <span class="success-text">Thành công</span>
+                                        </div>
+                                    </article>
+                                    <article class="transaction__history--item">
+                                        <div class="transaction__history--context">
+                                            <a href="" class="transaction__history__item--img">
+                                                <img src="./assets/img/transaction/product.png" alt="">
+                                            </a>
+                                            <div class="transaction__history__item--context">
+                                                <h2>Steam Wallet Code 75,000 VND</h2>
+                                                <p>SKU: </p>
+                                            </div>
+                                        </div>
+                                        <div class="transaction__history__item--quantity">
+                                            <span class="transaction__history__quantity--text">SL: 1</span>
+                                        </div>
+                                        <div class="transaction__history__item--price">
+                                            <span class="transaction__history__price--text">79,879</span>
+                                        </div>
+                                        <div class="transaction__history__item--status">
+                                            <span class="pending-text">Chờ thanh toán</span>
+                                        </div>
+                                    </article>
+                                    <article class="transaction__history--item">
+                                        <div class="transaction__history--context">
+                                            <a href="" class="transaction__history__item--img">
+                                                <img src="./assets/img/transaction/product.png" alt="">
+                                            </a>
+                                            <div class="transaction__history__item--context">
+                                                <h2>Steam Wallet Code 75,000 VND</h2>
+                                                <p>SKU: </p>
+                                            </div>
+                                        </div>
+                                        <div class="transaction__history__item--quantity">
+                                            <span class="transaction__history__quantity--text">SL: 1</span>
+                                        </div>
+                                        <div class="transaction__history__item--price">
+                                            <span class="transaction__history__price--text">79,879</span>
+                                        </div>
+                                        <div class="transaction__history__item--status">
+                                            <span class="cart-text">Giỏ hàng</span>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <!-- Pagination -->
+                                <div class="transaction__history__pagination">
+                                    <ul class="transaction__history__pagination--list">
+                                        <li><a href="" class="transaction__history__pagination--item transaction__history__pagination--back">
+                                                <img src="./assets/img/ic_round-arrow-back.svg" alt="">
+                                            </a></li>
+                                        <li><a href="" class="transaction__history__pagination--item active">1</a></li>
+                                        <li><a href="" class="transaction__history__pagination--item">2</a></li>
+                                        <li><a href="" class="transaction__history__pagination--item">3</a></li>
+                                        <li><a href="" class="transaction__history__pagination--item transaction__history__pagination--foward">
+                                                <img src="./assets/img/ic_round-arrow-back.svg" alt="">
+                                            </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+        <%- include("./partials/footer.ejs") %>
+        <script type="module" src="./main.js"></script>
+</body>
+
+</html>

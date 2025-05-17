@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account</title>
+    <%- include("./partials/head.ejs") %>
+</head>
+
+<body>
+    <%- include("./partials/header.ejs") %>
+        <div class="account-wrapper">
+            <div class="account__wrapper--background">
+            </div>
+            <div class="container">
+                <main class="account__container">
+                    <section class="account__info d-sm-none">
+                        <div class="account__info--avatar">
+                            <img src="./assets/img/account/avatar.png" alt="">
+                            <div class="account__info--changeavt d-sm-none">
+                                <img src="./assets/img/account/camera.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="account__info--context">
+                            <h1 class="account__info--name">Nguyễn Xuân Việt</h1>
+                            <a href="./account.html" class="account__info--view">Thông tin tài khoản</a>
+                        </div>
+
+
+
+                        <ul class="account__info__funcitonal--list">
+                            <li>
+                                <a href="./myaccount.html" class="account__info__functional--item">
+                                    <div class="item__icon--cover">
+                                        <img src="./assets/img/account/user.svg" alt="">
+                                    </div>
+                                    My account
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="account__info__functional--item">
+                                    <div class="item__icon--cover">
+                                        <img src="./assets/img/account/topup.svg" alt="">
+                                    </div>
+                                    Topup
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./transaction-history.html" class="account__info__functional--item">
+                                    <div class="item__icon--cover">
+                                        <img src="./assets/img/account/history.svg" alt="">
+                                    </div>
+                                    Transaction History
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="account__info__functional--item">
+                                    <div class="item__icon--cover">
+                                        <img src="./assets/img/account/inventory.svg" alt="">
+                                    </div>
+                                    Inventory
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="account__info__functional--item">
+                                    <div class="item__icon--cover">
+                                        <img src="./assets/img/account/favorite.svg" alt="">
+                                    </div>
+                                    My Favorite
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="account__overview">
+                        <div class="account__overview--content">
+                            <div class="account__overview--header d-none d-sm-flex">
+                                <a href="./account.html">&lt;</a>
+                                <h2>Tài khoản của tôi</h2>
+                            </div>
+                            <div class="accountform__label">
+                                <label for="personal__info" onclick="changeViewInfo()" class="accountform__label--check">
+                                    Thông tin cá nhân
+                                </label>
+                                <input type="checkbox" id="personal__info" checked class="d-none">
+                                <label for="personal__pwchange" onclick="changeViewPwChange()" class="accountform__label--check">
+                                    Thay đổi mật khẩu
+                                </label>
+                                <input type="checkbox" id="personal__pwchange" class="d-none">
+                            </div>
+                            <div class="account__overview--context d-none d-sm-block">
+                                <span>Avatar</span>
+                                <div class="account__overview--avatar">
+                                    <img src="./assets/img/account/avatar.png" alt="">
+                                </div>
+                                <button class="account__overview--changeavtbtn">Change photo</button>
+                            </div>
+
+                            <div class="accountform__content"></div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+        <%- include("./partials/footer.ejs") %>
+        <script type="module" src="./main.js"></script>
+        <script>
+            var setText = document.getElementsByClassName("accountform__content")[0];
+            var setLabelAttr = document.getElementsByClassName("accountform__label--check");
+            function changeViewInfo(){
+                setLabelAttr[0].classList.add("accountform__style");
+                setLabelAttr[1].classList.remove("accountform__style");
+                setText.innerHTML = `<form action="" class="accountform__info">
+                                    <div class="accountform__info--formgroup">
+                                        <label for="surename">Họ</label>
+                                        <input type="text" value="Toan" id="surename">
+                                    </div>
+                                    <div class="accountform__info--formgroup">
+                                        <label for="name">Tên</label>
+                                        <input type="text" value="Dang" id="name">
+                                    </div>
+                                    <div class="accountform__info--formgroup">
+                                        <label for="email">Email</label>
+                                        <input type="email" value="toandesigntmcn@gmail.com" id="email">
+                                    </div>
+                                    <div class="accountform__info--formgroup">
+                                        <label for="phone">SĐT</label>
+                                        <input type="tel" value="096320887" id="phone">
+                                    </div>
+                                    <div class="accountform__info--formgroup">
+                                        <label for="address">Địa chỉ</label>
+                                        <input type="text" value="Ha Noi" id="address">
+                                    </div>
+                                    <div class="accountform__info--formgroup">
+                                        <button type="submit" class="accountform__info--btn">Cập nhập</button>
+                                    </div>
+                                </form>`
+            }
+            function changeViewPwChange(){
+                setLabelAttr[0].classList.remove("accountform__style");
+                setLabelAttr[1].classList.add("accountform__style");
+                setText.innerHTML = `<form action="" class="accountform__change" autocomplete="off" >
+                                    <div class="accountform__change--formgroup">
+                                        <label for="current-password">Current Password</label>
+                                        <input type="password" value="" id="current-password">
+                                    </div>
+                                    <div class="accountform__change--formgroup">
+                                        <label for="new-password">New Password</label>
+                                        <input type="password" value="" id="new-password">
+                                    </div>
+                                    <div class="accountform__change--formgroup">
+                                        <label for="confirm-password">Confirm Password</label>
+                                        <input type="password" value="" id="confirm-password">
+                                    </div>
+                                    <div class="accountform__change--warnning">
+                                        <span>
+                                            <img src="./assets/img/account/info-outline.svg" alt="">
+                                            Password contain 8 ~ 20 characters.
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/account/info-outline.svg" alt="">
+                                            Combination of capital and small letters and number.
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/account/info-outline.svg" alt="">
+                                            Without any Symbol or Special characters.
+                                        </span>
+                                    </div>
+                                    <div class="accountform__change--formgroup">
+                                        <button type="submit" class="accountform__change--btn">Cập nhập</button>
+                                    </div>
+                                </form>`
+            }
+            changeViewInfo();
+            
+        </script>
+</body>
+
+</html>

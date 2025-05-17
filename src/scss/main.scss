@@ -14,6 +14,8 @@
 @use "./pages/payment";
 @use "./pages/sign-in";
 @use "./pages/sign-up";
+@use "./pages/myaccount";
+@use "./pages/transaction-history.scss";
 
 // Components
 @use "./components/button";

@@ -1,0 +1,308 @@
+@use "../variables" as *;
+
+.transaction__history--search{
+    width: 25rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 3.2rem;
+    margin-left: auto;
+    input{
+        border-radius: 10rem;
+        border: 0.1rem solid $grey;
+        background: $white;
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+        width: 100%;
+    }
+    .transaction__history--searchicon{
+        position: absolute;
+        top: 0.6rem;
+        right: 1rem;
+    }
+}
+
+.transaction__history--list{
+    margin-top: 3.6rem;
+    border-top: 0.1rem solid $light-grey;
+}
+
+.transaction__history--item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.transaction__history--item:not(:first-child){
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+    border-top: 0.1rem solid $grey;
+}
+
+.transaction__history--item:first-child{
+    padding-top: 2.2rem;
+    padding-bottom: 3.2rem;
+}
+
+.transaction__history--context{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.transaction__history__item--img{
+    width: 7.6rem;
+    height: 7.6rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 1.1rem;
+    overflow: hidden;
+    display: block;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+}
+
+.transaction__history__item--context{
+    max-width: 24rem;
+    h2{
+        color: $light-black;
+        font-family: $font-quicksand;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 2.4rem;
+    }
+    p{
+        color: $black;
+        font-family: $font-inter;
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 1.1rem;
+    }
+}
+.transaction__history__quantity--text{
+    color: $primary-color;
+    font-family: $font-inter;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.transaction__history__price--text{
+    color: $primary-color;
+    font-family: $font-inter;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.transaction__history__item--status{
+    width: 12rem;
+    text-align: right;
+    font-family: $font-inter;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.cart-text{
+    color: $light-black;
+}
+
+.pending-text{
+    color: $danger;
+}
+
+.success-text{
+    color: $success;
+}
+
+.serving-text{
+    color: $primary-color;
+}
+
+.transaction__history__pagination {
+    margin-top: 10rem;
+
+    .transaction__history__pagination--list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.3rem;
+    }
+
+    .transaction__history__pagination--item {
+        width: 4.4rem;
+        height: 4.4rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: $dark-gray;
+        background-color: $grey;
+        border-radius: 50%;
+        flex-shrink: 0;
+        font-family: $font-quicksand;
+        font-size: 2.56rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        transition: color, background-color;
+        transition-timing-function: ease;
+        transition-duration: 0.3s;
+
+        &:hover {
+            color: $white;
+            background-color: $primary-color;
+        }
+
+        &.active {
+            color: $white;
+            background-color: $primary-color;
+        }
+    }
+
+    .transaction__history__pagination--foward {
+        rotate: 180deg;
+        background-color: transparent;
+
+        img {
+            filter: invert(86%) sepia(21%) saturate(761%) hue-rotate(92deg) brightness(200%) contrast(107%);
+        }
+    }
+
+    .transaction__history__pagination--back {
+        background-color: transparent;
+
+        img {
+            filter: invert(86%) sepia(21%) saturate(761%) hue-rotate(92deg) brightness(200%) contrast(107%);
+        }
+    }
+
+    .transaction__history__pagination--foward:hover,
+    .transaction__history__pagination--back:hover {
+        img {
+            filter: brightness(1000%);
+        }
+    }
+}
+
+
+@media (max-width: 1399.98px) {}
+
+@media (max-width: 1199.98px) {
+    .transaction__history__item--context {
+        h2 {
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+    }
+
+    .transaction__history__quantity--text {
+        font-size: 1.2rem;
+    }
+
+    .transaction__history__price--text {
+        font-size: 1.2rem;
+    }
+
+    .transaction__history__item--status {
+        width: 11rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .transaction__history__account--container{
+        flex-direction: column;
+    }
+    .transaction__history__account--info{
+        width: 100%;
+    }
+    .transaction__history__account--overview{
+        width: 100%;
+    }
+    .transaction__history__pagination--item {
+        width: 4rem;
+        height: 4rem;
+        font-size: 2.2rem;
+    }
+
+    .transaction__history__pagination--list {
+        gap: 1.2rem !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .transaction__history__item--context {
+        h2 {
+            font-size: 1.2rem;
+            line-height: 2rem;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        p {
+            font-size: 1.1rem;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .transaction__history__quantity--text {
+        font-size: 1rem;
+    }
+
+    .transaction__history__price--text {
+        font-size: 1rem;
+    }
+
+    .transaction__history__item--status {
+        width: 8rem;
+        font-size: 1rem;
+    }
+    .transaction__history__pagination {
+        margin-top: 20rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .transaction__history__account--overview{
+        min-width: 45rem;
+    }
+    .transaction__history__account-wrapper{
+        overflow: auto;
+    }
+    .transaction__history__pagination {
+        margin-top: 15rem;
+    }
+
+    .transaction__history__pagination--item {
+        width: 3.5rem !important;
+        height: 3.5rem !important;
+        font-size: 1.8rem !important;
+    }
+
+    .transaction__history__pagination--list {
+        gap: 1rem !important;
+    }
+}

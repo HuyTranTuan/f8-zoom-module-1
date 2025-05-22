@@ -290,7 +290,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 9;
+        z-index: 998;
         width: 100vw;
         height: 100vh;
         background: #909090;
@@ -305,11 +305,10 @@
         position: fixed;
         top: 1rem;
         left: 1rem;
-        z-index: 10;
+        z-index: 999;
         background: $white;
         border-radius: 2rem;
         min-width: 25rem;
-        height: 45rem;
         overflow-y: auto;
         transition: visibility, opacity;
         transition-duration: 0.3s;

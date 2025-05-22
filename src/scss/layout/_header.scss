@@ -234,6 +234,7 @@ nav.header__nav {
     align-items: center;
     gap: 2rem;
     position: relative;
+    z-index: 999;
 
     .header__nav--item {
         & > a {
@@ -274,7 +275,7 @@ nav.header__nav {
         transform-origin: 10% 0%;
         opacity: 0;
         visibility: hidden;
-        scale: 0;
+        scale: 1 0;
         background-color: $white;
         transition: opacity, visibility, scale;
         transition-duration: 0.3s;
@@ -288,7 +289,7 @@ nav.header__nav {
         &:hover {
             opacity: 1;
             visibility: visible;
-            scale: 1;
+            scale: 1 1;
         }
 
         &--list {
@@ -316,6 +317,7 @@ nav.header__nav {
             & > a:hover ~ .header__megamenu--submenu{
                 visibility: visible;
                 opacity: 1;
+                scale: 1 1;
             }
         }
 
@@ -369,7 +371,7 @@ nav.header__nav {
             transform-origin: 0% 0%;
             opacity: 0;
             visibility: hidden;
-            scale: 0;
+            scale: 1 0;
             background-color: $white;
             transition: opacity, visibility, scale;
             transition-duration: 0.3s;
@@ -395,7 +397,7 @@ nav.header__nav {
         }
 
         & > a:hover ~ .header__submenu, .header__submenu:hover{
-            scale: 1;
+            scale: 1 1;
             opacity: 1;
             visibility: visible;
         }

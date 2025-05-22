@@ -22,7 +22,7 @@ $secondary-color: #FFF4F1;
 
 .footer__content{
     margin-top: 6rem;
-    h3{
+    h2{
         color: $black;
         font-family: Manrope;
         font-size: 2rem;
@@ -82,7 +82,7 @@ $secondary-color: #FFF4F1;
         text-decoration: none;
     }
     a{
-        display: block;
+        display: inline-block;
         margin-top: 1rem;
         &:hover{
             color: $primary-color;
